@@ -64,7 +64,7 @@ fun BasicCompose(modifier: Modifier = Modifier) {
         )
         Text(text = "Nama", fontSize = 12.sp)
         Text(text = "Miftahul huda", fontSize = 10.sp, fontWeight = FontWeight.Bold, color = Color.Red)
-
+        Text(text = "20220140049", fontSize = 25.sp)
     }
 }
 
