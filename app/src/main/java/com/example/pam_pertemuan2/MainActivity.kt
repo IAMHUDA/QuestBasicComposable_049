@@ -55,7 +55,9 @@ fun BasicCompose(modifier: Modifier = Modifier) {
         verticalArrangement = Arrangement.spacedBy(2.dp),
         horizontalAlignment = Alignment.CenterHorizontally){
         Text(text = "Login", fontSize = 30.sp, fontWeight = FontWeight.Bold)
-        }
+        Text(text = "ini halaman Login", fontSize = 16.sp, fontStyle = FontStyle.Italic)
+
+    }
 }
 
 @Composable
