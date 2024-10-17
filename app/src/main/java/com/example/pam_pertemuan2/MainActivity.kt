@@ -71,7 +71,12 @@ fun BasicCompose(modifier: Modifier = Modifier) {
             modifier = Modifier
                 .size(700.dp)
                 .clip(CircleShape)
-                .shadow(8.dp)
+                .shadow(
+                    elevation = 10.dp,
+                    shape = CircleShape,
+                    ambientColor = Color.White,
+                    spotColor = Color.White
+                )
         )
     }
 }
