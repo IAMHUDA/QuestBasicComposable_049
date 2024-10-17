@@ -50,7 +50,9 @@ class MainActivity : ComponentActivity() {
 fun BasicCompose(modifier: Modifier = Modifier) {
     Column(
         modifier = Modifier
-            .fillMaxSize(),
+            .fillMaxSize()
+            .padding(6.dp),
+        verticalArrangement = Arrangement.spacedBy(2.dp),
         horizontalAlignment = Alignment.CenterHorizontally){
         Text(text = "Login", fontSize = 30.sp, fontWeight = FontWeight.Bold)
         }
