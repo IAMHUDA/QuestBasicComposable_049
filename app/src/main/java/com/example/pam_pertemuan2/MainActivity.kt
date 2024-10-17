@@ -48,7 +48,12 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun BasicCompose(modifier: Modifier = Modifier) {
-
+    Column(
+        modifier = Modifier
+            .fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally){
+        Text(text = "Login", fontSize = 30.sp, fontWeight = FontWeight.Bold)
+        }
 }
 
 @Composable
