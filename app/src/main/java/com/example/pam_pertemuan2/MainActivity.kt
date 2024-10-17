@@ -19,6 +19,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
@@ -63,13 +64,14 @@ fun BasicCompose(modifier: Modifier = Modifier) {
                 .padding(top = 20.dp)
         )
         Text(text = "Nama", fontSize = 12.sp)
-        Text(text = "Miftahul huda", fontSize = 10.sp, fontWeight = FontWeight.Bold, color = Color.Red)
+        Text(text = "Miftahul huda", fontSize = 10.sp, fontWeight = FontWeight.Bold, color = Color(0xFFFFEB3B))
         Text(text = "20220140049", fontSize = 25.sp)
         Image(painter = painterResource(id = R.drawable.profile),
             contentDescription = null,
             modifier = Modifier
                 .size(700.dp)
                 .clip(CircleShape)
+                .shadow(8.dp)
         )
     }
 }
