@@ -5,7 +5,9 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -23,6 +25,8 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shadow
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
@@ -84,18 +88,29 @@ fun BasicCompose(modifier: Modifier = Modifier) {
                     blurRadius = 8f  // Mengatur seberapa buram bayangan
                 )
             ))
-        Image(painter = painterResource(id = R.drawable.profile),
-            contentDescription = null,
+        Box(
             modifier = Modifier
-                .size(700.dp)
-                .clip(CircleShape)
-                .shadow(
-                    elevation = 10.dp,
-                    shape = CircleShape,
-                    ambientColor = Color.White,
-                    spotColor = Color.White
-                )
-        )
+                .size(430.dp),
+            contentAlignment = Alignment.Center  // Mengatur konten di tengah
+        ) {
+
+            Box(
+                modifier = Modifier
+                    .size(430.dp)
+                    .clip(CircleShape)
+                    .background(Color.Yellow.copy(alpha = 0.4f))
+            )
+
+
+            Image(
+                painter = painterResource(id = R.drawable.profile),
+                contentDescription = null,
+                modifier = Modifier
+                    .size(400.dp)
+                    .clip(CircleShape),
+                contentScale = ContentScale.Crop
+            )
+        }
     }
 }
 
