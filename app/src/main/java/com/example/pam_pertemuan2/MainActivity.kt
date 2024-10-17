@@ -56,6 +56,12 @@ fun BasicCompose(modifier: Modifier = Modifier) {
         horizontalAlignment = Alignment.CenterHorizontally){
         Text(text = "Login", fontSize = 30.sp, fontWeight = FontWeight.Bold)
         Text(text = "ini halaman Login", fontSize = 16.sp, fontStyle = FontStyle.Italic)
+        Image(painter = painterResource(id = R.drawable.logo),
+            contentDescription = null,
+            modifier = Modifier
+                .size(200.dp)
+                .padding(top = 20.dp)
+        )
 
     }
 }
