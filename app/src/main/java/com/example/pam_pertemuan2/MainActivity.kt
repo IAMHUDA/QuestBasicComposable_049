@@ -62,6 +62,8 @@ fun BasicCompose(modifier: Modifier = Modifier) {
                 .size(200.dp)
                 .padding(top = 20.dp)
         )
+        Text(text = "Nama", fontSize = 12.sp)
+        Text(text = "Miftahul huda", fontSize = 10.sp, fontWeight = FontWeight.Bold, color = Color.Red)
 
     }
 }
