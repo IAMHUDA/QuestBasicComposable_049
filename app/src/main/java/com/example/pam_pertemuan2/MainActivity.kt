@@ -37,8 +37,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             PAM_pertemuan2Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "MENAMPILKAN GREETING",
+                    BasicCompose(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -47,7 +46,10 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@Composable
+fun BasicCompose(modifier: Modifier = Modifier) {
 
+}
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
