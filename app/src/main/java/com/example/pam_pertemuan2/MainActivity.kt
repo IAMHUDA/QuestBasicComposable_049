@@ -20,8 +20,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shadow
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -55,7 +58,15 @@ fun BasicCompose(modifier: Modifier = Modifier) {
             .padding(6.dp),
         verticalArrangement = Arrangement.spacedBy(2.dp),
         horizontalAlignment = Alignment.CenterHorizontally){
-        Text(text = "Login", fontSize = 30.sp, fontWeight = FontWeight.Bold)
+        Text(text = "Login", fontSize = 30.sp, fontWeight = FontWeight.Bold,
+            style = TextStyle(
+                shadow = Shadow(
+                    color = Color.Yellow,
+                    offset = Offset(4f, 4f),  // Mengatur offset shadow
+                    blurRadius = 8f  // Mengatur seberapa buram bayangan
+                )
+            )
+        )
         Text(text = "ini halaman Login", fontSize = 16.sp, fontStyle = FontStyle.Italic)
         Image(painter = painterResource(id = R.drawable.logo),
             contentDescription = null,
