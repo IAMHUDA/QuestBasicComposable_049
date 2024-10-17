@@ -76,7 +76,14 @@ fun BasicCompose(modifier: Modifier = Modifier) {
         )
         Text(text = "Nama", fontSize = 12.sp)
         Text(text = "Miftahul huda", fontSize = 10.sp, fontWeight = FontWeight.Bold, color = Color(0xFFFFEB3B))
-        Text(text = "20220140049", fontSize = 25.sp)
+        Text(text = "20220140049", fontSize = 25.sp,
+            style = TextStyle(
+                shadow = Shadow(
+                    color = Color.Yellow,
+                    offset = Offset(4f, 4f),  // Mengatur offset shadow
+                    blurRadius = 8f  // Mengatur seberapa buram bayangan
+                )
+            ))
         Image(painter = painterResource(id = R.drawable.profile),
             contentDescription = null,
             modifier = Modifier
